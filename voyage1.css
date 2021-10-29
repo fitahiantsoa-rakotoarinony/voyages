@@ -1,0 +1,180 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Avenir, sans-serif;
+    
+}
+
+header{
+    height: 100px;
+   background-color: antiquewhite;
+    
+    display:flex;
+    justify-content: center;
+}
+
+body{
+    background-color: antiquewhite;
+}
+
+
+
+
+
+#voyage{
+    display: flex;
+    justify-content: space-evenly;
+  flex-wrap: wrap;
+    padding: 10px;
+    margin: 10px;
+  }
+  .element{
+
+    width: 500px;
+    height: 600px;
+    background-color: rgb(231, 227, 227);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    border: 2px solid black;
+  }
+
+  
+  .taille{
+      width: 500px;
+      height: 300px;
+      border-radius: 20px;
+      border: 2px solid black;
+      transition-property: background-color, border;
+      transition: transform ease-in-out .5s;
+
+  }
+  .taille:hover{
+      transform:  scale(1.1) ;
+  }
+   
+  
+  .titre{
+      
+      text-align: center;
+      margin: 10px;
+      background-color: cadetblue;
+      font-family: Arial;
+    }
+    h1{
+        background-color: rgb(162, 198, 199);
+        
+    }
+
+
+
+
+
+
+
+    
+   
+       
+       .child2{
+           width: 1500px;
+       }
+       nav{
+           width: 100%;
+       }
+       
+       
+       nav ul{
+           list-style-type: none;
+           display: flex;
+           justify-content: space-around;
+          background-color: rgb(148, 230, 230); 
+       }
+       
+       nav ul li{
+           
+         
+           text-align: center;
+           position: relative;
+       }
+       
+       nav ul::after{
+           content: "";
+           display: table;
+           clear: both;
+       }
+       
+       nav a{
+           display: block;
+           text-decoration: none;
+           color: black;
+           border-bottom: 2px solid transparent;
+           padding: 10px 0px;
+       }
+       
+       nav a:hover{
+           color: orange;
+           border-bottom: 2px solid gold;
+       }
+       
+       .sous{
+           display: none;
+           box-shadow: 0px 1px 2px #CCC;
+           background-color: white;
+           position: absolute;
+           width: 100%;
+           z-index: 1000;
+       }
+       nav > ul li:hover .sous{
+           display: block;
+       }
+       .sous li{
+           float: none;
+           width: 100%;
+           text-align: left;
+       }
+       .sous a{
+           padding: 10px;
+           border-bottom: none;
+       }
+       .sous a:hover{
+           border-bottom: none;
+           background-color: RGBa(200,200,200,0.1);
+       }
+       .deroulant > a::after{
+           content:" ▼";
+           font-size: 12px;
+       }
+       
+
+
+       .conteneur2{
+        max-width: 960px;
+        overflow: hidden;
+        margin: -5px auto;
+        box-shadow: 0px 0px 10px #777;
+    }
+    .d2{
+        width: 300%;
+        height: 600;
+        padding-top: 30%;
+        background-color: #EDEDED;
+        background-image: url("https://worldpass.heyme.care/sites/default/files/inline-images/Le%20Gosier.jpg");
+        background-size: contain;
+        animation: defilement2 12s linear infinite;
+    }    
+    @keyframes defilement2{
+        0%{transform: translate(0,0);}
+        100%{transform: translate(-75%,0);}
+        0%{background-image: url("voyage1.jpg");}
+        15%{background-image: url("voyage1.jpeg");}
+        33.33%{background-image: url("imagesvoyage1.jpeg");}
+        66.67%{background-image: url("expo2020-pavilion-monaco-1920-x-1080.jpg");}
+        100%{background-image: url("téléchargement.jpeg");}
+        
+    }
+     .d2:hover{
+        animation-play-state: paused;
+    }
