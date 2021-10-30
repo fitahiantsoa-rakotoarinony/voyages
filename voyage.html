@@ -1,53 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="Fr">
 <head>
-    <link href="voyage.css" rel="stylesheet">
+    <link href="Voyage.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Voyage</title>
 </head>
 
 <body>
     <header>
-
-        <div class="child2">
+    <nav>
             <nav>
                 <ul>
-                    <li class="deroulant"><a href="#">Continent &ensp;</a>
-                        <ul class="sous">
-                            <h3>Amerique </h3>
-                            <li><a href="voyage.html">Guadeloupe</a></li>
-                            <h3>Europe </h3>
-                            <li><a href="voyage1.html">Monaco</a></li>
-                            <h3>Afrique </h3>
-                            <li><a href="#">Comore</a></li>
-                            <h3>Asie</h3>
-                            <li><a href="#">Japon</a></li>
-                        </ul>
+                    <li class="menu-deroulant">
+                        <a href="#">Continent</a>
+                        <ul class="sous-menu">
+                            <li><h3>Amérique</h3></li>
+                            <li><a href="voyage.html">La Guadeloupe</a>
+                            
                     </li>
-                    <li class="deroulant"><a href="#">membre d'equipe &ensp;</a>
-                        <ul class="sous">
-                            <h3>Fitahiantsoa</h3>
-                            <li><a href="voyage.html">Guadeloupe</a></li>
-                            <li><a href="voyage1.html">Monaco</a></li>
-                            <h3>Abdou</h3>
-                            <li><a href="#">Comore</a></li>
-                            <h3>Claudio</h3>
-                            <li><a href="#">Japon</a></li>
-                        </ul>
+                    <li><h3>Afrique</h3></li>
+                    <li><a href="#">Les comores</a>
+                    
                     </li>
-                 
-                    <li class="deroulant"><a href="formulaire.html">CONTACT</a>
+                  
+                        <li><h3>Asie</h3></li>
+                    <li><a href="#">Japon</a>
+                    
                     </li>
-
                 </ul>
+                </li>
+                <li class="menu-deroulant">
+                    <a href="#">Membre de l'equipe</a>
+                    <ul class="sous-menu">
+                        <li><a href="voyage.html">Fitahiantsoa</a></li>
+                        <li><a href="#">Abdou</a></li>
+                        <li><a href="#">Claudio</a></li>
+                    </ul>
             </nav>
-
-
-        </div>
-    </header>
+      </header>
     <main>
 
 
@@ -136,8 +128,79 @@
 
         </section>
     </main>
-    <footer>
-        <h1>Merci d'avoir regarder ma page</h1>
+    <footer id="bas">
+        <div class="formform">
+
+            <div class="footer-services">
+                <h4>Nos Services</h4>
+                <ul class="bloc liste-services">
+                    <li><a href="#">On y mettra quelque chose</a></li>
+                    <li><a href="#">On y mettra quelque chose</a></li>
+                    <li><a href="#">On y mettra quelque chose</a></li>
+                    <li><a href="#">On y mettra quelque chose</a></li>
+                    <li><a href="#">On y mettra quelque chose</a></li>
+                    <li><a href="#">On y mettra quelque chose</a></li>
+                </ul>
+            </div>
+            <div class="bloc footer-contact">
+                <section>
+
+                    <div>
+                        <h3> contact</h3>
+                    </div>
+                    <div class="container">
+                        <form>
+                            <label for="fname">NOM</label>
+                            <input type="text" id="Nom" name="Nom" placeholder="Nom..">
+        
+                            <label for="EMAIL">EMAIL</label>
+                            <input type="text" id="e-mail" name="e-mail" placeholder="e-mail..">
+        
+                            <label for="PAYS">Pays</label>
+                            <select id="Pays" name="Pays">
+                                <option value="france">Amerique</option>
+                                <option value="france">Afrique</option>
+                                <option value="france">Asie</option>
+                                <option value="france">France</option>
+                                <option value="espagne">Espagne</option>
+                                <option value="allemagne">Allemagne</option>
+                                <option value="australie">Australia</option>
+                                <option value="canada">Canada</option>
+                                <option value="usa">NYC</option>
+                            </select>
+        
+                            <label for="sujet">Sujet</label>
+                            <textarea id="sujet" name="sujet" placeholder="Ecrire quelque chose.."
+                                style="height:200px"></textarea>
+        
+                            <p><input type="submit" value="Envoyer" />
+        
+                            </p>
+                            
+                        </form>
+                    </div>
+        
+        
+                </section>
+
+            </div>
+            <div class="bloc footer-agence">
+                <h4>Ouverture de nos agences</h4>
+                <ul class="liste-horaires">
+                    <li>✔️Lun 10-19h</li>
+                    <li>✔️Mar 10-19h</li>
+                    <li>✔️Mer 10-19h</li>
+                    <li>✔️Jeu 10-19h</li>
+                    <li>✔️Ven 10-19h</li>
+                    <li>❌Sam 10-19h</li>
+                    <li>❌Dim 10-19h</li>
+                </ul>
+            </div>
+        </div>
+
+        
+
+
     </footer>
 </body>
 
