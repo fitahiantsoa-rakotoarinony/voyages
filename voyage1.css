@@ -1,0 +1,347 @@
+:root{
+  --hauteur-menu: 60px;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Montserrat, sans-serif;
+}
+nav {
+  width: 100%;
+  font-size: 18px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+nav > ul {
+  display: flex;
+  text-align: center;
+  box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.3);
+  height: var(--hauteur-menu);
+}
+ 
+nav ul {
+  list-style-type: none;
+}
+
+nav > ul > li {
+  background-color: white;
+  position: relative;
+  height: 100%;
+  flex: 1;
+}
+nav > ul > li > a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+}
+
+.menu-deroulant > a:after{
+  content: '❯';
+  font-size: 15px;
+  margin-left: 7px;
+  display: inline-block;
+  background-color: rgb(156, 209, 245);
+  transition: 5s;
+}
+.sous-menu {
+  margin-top: var(--hauteur-menu);
+  width: 100%;
+  text-align: left;
+  background-color: white;
+  border-radius: 2px;
+  overflow: hidden;
+  max-height: 0;
+}
+
+.sous-menu > li > a {
+  height: 50px;
+  padding-left: 20px;
+  width: 100%;
+  align-items: center;
+  display: flex;
+}
+nav > ul > li:hover > a{
+  color: #2169EC;
+}
+.sous-menu > li:hover {
+  background-color: rgba(33, 105, 236, 0.3);
+}
+
+.sous-menu > li:hover > a {
+  color: white;
+}
+
+@keyframes rotationFleche {
+  0% {
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(90deg);
+  }
+}
+.menu-deroulant:hover > a:after{
+  animation: rotationFleche 0.2s linear forwards;
+}
+@keyframes apparitionSousMenu {
+  0% {
+    box-shadow: 0px 3px 3px 1px rgba(0,0,0,0);
+    border-top: 3px solid #2169EC;
+  }
+  30% {
+    box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+  }
+  100% {
+    max-height: 50em;
+    border-top: 3px solid #2169EC;
+    box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+  }
+}
+.menu-deroulant:hover > .sous-menu {
+  animation: apparitionSousMenu 1s forwards;
+}
+
+body{
+  background-color: antiquewhite;
+}
+
+
+
+
+
+#voyage{
+  display: flex;
+  justify-content: space-evenly;
+flex-wrap: wrap;
+  padding: 10px;
+  margin: 10px;
+}
+.element{
+
+  width: 500px;
+  height: 600px;
+  background-color: rgb(231, 227, 227);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+  border: 2px solid black;
+}
+
+
+.taille{
+    width: 500px;
+    height: 300px;
+    border-radius: 20px;
+    border: 2px solid black;
+    transition-property: background-color, border;
+    transition: transform ease-in-out .5s;
+
+}
+.taille:hover{
+    transform:  scale(1.1) ;
+}
+ 
+
+.titre{
+    
+    text-align: center;
+    margin: 10px;
+    background-color: cadetblue;
+    font-family: Arial;
+  }
+  h1{
+      background-color: rgb(162, 198, 199);
+      
+  }
+
+
+  
+
+     .conteneur2{
+      max-width: 960px;
+      overflow: hidden;
+      margin: -5px auto;
+      box-shadow: 0px 0px 10px #777;
+  }
+  .d2{
+      width: 300%;
+      height: 600;
+      padding-top: 30%;
+      background-color: #EDEDED;
+      background-image: url("https://worldpass.heyme.care/sites/default/files/inline-images/Le%20Gosier.jpg");
+      background-size: contain;
+      animation: defilement2 12s linear infinite;
+  }    
+  @keyframes defilement2{
+      0%{transform: translate(0,0);}
+      100%{transform: translate(-75%,0);}
+      0%{background-image: url("rue.jpg");}
+      15%{background-image: url("photo1.jpg");}
+      33.33%{background-image: url("photo2.jpg");}
+      66.67%{background-image: url("port.webp");}
+      100%{background-image: url("fleure.jpg");}
+      
+  }
+   .d2:hover{
+      animation-play-state: paused;
+  }
+
+  
+  #bas {
+      background: rgb(255, 0, 255);
+      flex-shrink: 0;
+      border-top: 1px dashed #000000;
+      color: #333;
+      width: 100%;
+      background: #f1f1f1;
+      margin: 0 auto;
+      display: block;
+      align-items: flex-start;
+      justify-content:space-between;
+      font-size: 50px 0 100px ;
+      
+    }
+    
+    .contenubas {
+      display: flex;
+      flex-direction: column;
+      bottom: 3px;
+     
+     
+    }
+    
+    .bloc {
+      width: 100%;
+      margin: 0 10%;
+      color: #000000;
+    }
+    /* contact */
+    h4{
+      font-size: 25px;
+      padding-bottom: 20px;
+    }
+    .footer-contact p {
+    padding-bottom:5px 0 ;
+    }
+    .footer-services {
+      font-size: 1em;
+    display: block;
+    justify-content: flex-start;
+    margin: 0;
+    width: 425px;
+     
+    }
+    
+    
+    .footer-agence {
+      font-size: 1em;
+      /* padding-bottom:10px ; */
+      }
+    
+    /* SERVICE */
+    
+    .liste-services,li {
+      padding: 2px 0;
+    }
+    
+    .formform {
+      display: flex;
+      
+    }
+    
+    .formulaire {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    p.titrehaut {
+      left: 37%;
+    position:absolute;
+    }
+    
+    p.titrebas {
+      left: 37%;
+      position: absolute;
+    }
+    
+    .titrecentre {
+      left: 38%;
+      position:absolute
+    }
+    
+    #copyrighteticons {
+      display: flex;
+      bottom: 25%;
+      margin: 0;
+      padding: 10;
+    }
+    
+.container {
+  border-radius: 5px;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+justify-content: center; 
+text-align: center; 
+}
+
+
+
+
+
+  
+input[type=text], select, textarea {
+width: 100%;
+padding: 12px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+margin-top: 6px;
+margin-bottom: 16px;
+resize: vertical;
+}
+
+input[type=submit] {
+background-color: #04AA6D;
+color: white;
+padding: 12px 20px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+
+input[type=submit]:hover {
+background-color: #45a049;
+}
+
+.container {
+border-radius: 5px;
+background-color: white;
+padding: 20px;
+display: flex;
+justify-content: center; 
+text-align: center; 
+}
+
+
+.imagegit {
+  margin-left: 170%;
+  }
+  
+  h3 {
+    text-align: center;
+  margin-top: 2%;
+  font-size: 2em;
+  font-family: 'Quicksand', sans-serif;
+    color: #FFFFFF;
+  text-shadow: 0 0 5px rgb(0, 0, 0), 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+  
+  }
